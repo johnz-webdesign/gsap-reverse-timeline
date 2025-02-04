@@ -1,15 +1,24 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import ExpandedMenu from "./components/ExpandedMenu";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [menuClicked, setmenuClicked] = useState(false);
+
+  function handleMenuClicked() {
+    setmenuClicked(!menuClicked);
+    console.log(menuClicked);
+  }
 
   return (
     <>
-      <div>
-        <button></button>
+      <ExpandedMenu toggle={menuClicked} />
+      <div className="flex h-[100vh] w-[100vw] items-center justify-center">
+        <button
+          onClick={handleMenuClicked}
+          className="border border-black p-2.5 text-black"
+        >
+          <h1>Button</h1>
+        </button>
       </div>
     </>
   );
