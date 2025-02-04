@@ -15,7 +15,7 @@ function App() {
       <div className="flex h-[100vh] w-[100vw] items-center justify-center">
         <button
           onClick={handleMenuClicked}
-          className="border border-black p-2.5 text-black"
+          className="border border-black p-2.5 text-black hover:opacity-75 z-20 bg-white"
         >
           <h1>Button</h1>
         </button>
